@@ -5,7 +5,7 @@ const concat = require( 'gulp-concat' );
 // Inkludera cssnano
 const cssnano = require( 'gulp-cssnano' );
 // Inkludera gulp-uglify-es
-const uglify = require( 'gulp-uglify-es' );
+const uglify = require( 'gulp-uglify-es' ).default;
 // Inkludera Browsersync
 const browserSync = require( 'browser-sync' ).create();
 // Inkludera gulp-image
@@ -47,7 +47,7 @@ function jsTask() {
     .pipe( babel({
         presets: [ "@babel/preset-env" ]
     }))
-    .pipe( uglify())
+    .pipe( uglify() )
     .pipe( dest( 'pub/js' ));
 }
 
@@ -70,7 +70,7 @@ function watchTask() {
     watch(
         [ paths.html, paths.sass, paths.js, paths.images ],
         parallel( htmlTask, sassTask, jsTask, imageTask )
-    ).on( 'change', browserSync.reload() );
+    ).on( 'change', browserSync.reload );
 }
 
 // Exportera tasks

@@ -1,0 +1,70 @@
+/* Variables */
+/* Font */
+$main-font: Trebuchet MS, sans-serif;
+$nav-font: Verdana, sans-serif;
+$main-font-size: 1em;
+$h1-font-size: 2em;
+$h2-font-size: 1.7em;
+
+/* Colors */
+$header-footer-color: #E6E6F5;
+$main-color: #F5F5FA;
+$reset-btn-color: #E69696;
+$submit-btn-color: #82DCB4;
+$featured-color: rgb(245, 245, 245, 0.8);
+$text-input-color: #E6E6F0;
+$selected-nav-icon-color: #D2D2DC;
+$link-color: #0000ff;
+
+/* Mixins */
+/* Sections */
+@mixin section {
+    padding: 5px 10px;
+    background-color: $main-color;
+}
+
+/* Navigation links */
+@mixin navlink {
+    font-family: $nav-font;
+    text-decoration: none;
+    color: black;
+}
+
+/* Text inputs (contact form, registration form, login form, admin form) */
+@mixin text-input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: $text-input-color;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: none;
+}
+
+/* Reset buttons (contact form, registration form, login form, admin form) */
+@mixin reset-btn {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: $reset-btn-color;
+    padding: 8px 0;
+    width: 100%;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/* Submit buttons (contact form, registration form, login form, admin form) */
+@mixin submit-btn {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: $submit-btn-color;
+    padding: 8px 0;
+    width: 100%;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    } 
+}
