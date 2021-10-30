@@ -39,6 +39,23 @@ body {
     }
 }
 
+.icon-bar {
+    transition: all 0.5s ease-out;
+}
+
+.open {
+    .icon-bar:nth-child(1) {
+        transform: rotate(40deg) translate(5px, 5px);
+    }
+    .icon-bar:nth-child(2) {
+        opacity: 0;
+    }
+    .icon-bar:nth-child(3) {
+        transform: rotate(-40deg);
+        translate: 0 -13px;
+    }
+}
+
 #current-page {
     background-color: $selected-nav-icon-color;
 

@@ -70,6 +70,7 @@ header {
     max-width: 35px;
     float: right;
     margin: 12px 0;
+    transition: all 0.5s ease-out;
 
     &:hover {
         cursor: pointer;
