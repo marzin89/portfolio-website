@@ -24,7 +24,7 @@
                         <li><a class="navlink" href="about.html">Om mig</a></li>
                         <li><a class="navlink" href="portfolio.html">Portfolio</a></li>
                         <li><a class="navlink" href="cv.html">CV</a></li>
-                        <li id="current-page"><a class="navlink" href="contact.html">Kontakt</a></li>
+                        <li><a class="navlink" href="contact.html">Kontakt</a></li>
                     </ul>
                 </nav>
                 <!-- Search bar and search icon -->
@@ -55,24 +55,19 @@
     </header>
     <!-- Main content -->
     <main>
-        <!-- Contact form -->
-        <section id="contact-form">
-            <h1>Kontakt</h1>
-            <form action="contact.html">
+        <!-- Login form -->
+        <section id="login-form">
+            <h1 id="h1-login">Logga in</h1>
+            <p><a id="sign-up-link" href="signup.php">Registrera dig</a></p>
+            <form action="admin.php" method="post">
                 <div>
-                    <input class="text-input" type="text" value="Namn *">
-                    <p id="name-error" class="error"></p>
+                    <input class="text-input" type="text" value="Användarnamn *">
+                    <p id="user-error" class="error"></p>
                 </div>
                 <div>
-                    <input class="text-input" type="text" value="E-post *">
-                    <p id="email-error" class="error"></p>
+                    <input class="text-input" type="text" value="Lösenord *">
+                    <p id="password-error" class="error"></p>
                 </div>
-                <div>
-                    <input class="text-input" type="text" value="Telefon">
-                    <p id="phone-error" class="error"></p>
-                </div>
-                <textarea class="text-input" name="message" id="message">Meddelande *</textarea>
-                <input class="reset-btn" type="reset" value="Rensa">
                 <input class="submit-btn" type="submit" value="Skicka">
             </form>
         </section>

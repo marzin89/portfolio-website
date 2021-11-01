@@ -74,7 +74,7 @@ main {
     }
 }
 
-#contact-form {
+#contact-form, #login-form {
     @include section;
     padding-top: 20px;
 
@@ -87,6 +87,16 @@ main {
         max-width: 600px;
         margin: 0 auto;
     }
+}
+
+#login-form {
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+.error {
+    display: none;
 }
 
 textarea {
@@ -122,15 +132,34 @@ h1 {
     margin: 10px 0;
 }
 
+#h1-login {
+    margin-bottom: 5px;
+}
+
 p {
     line-height: 1.5em;
 }
 
+#about {
+    @include section;
+    max-width: 460px;
+    margin: 0 auto;
+
+    p {
+        padding: 10px 0;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
 #footer-wrapper {
     padding: 20px 10px;
-    overflow: auto;
 
     @media only screen and (min-width: 769px) {
+        display: flex;
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -140,31 +169,25 @@ p {
     margin-bottom: 10px;
 
     @media only screen and (min-width: 769px) {
-        width: 8%;
-        max-width: 60px;
-        float: left;
-        margin-right: 35%;
+        width: 33.3%;
+        order: 1;
     }
 }
 
-#email {
-    margin: 10px 0;
-}
+#contact-inner-wrap {
 
-#github {
-    margin: 10px 0;
+    @media only screen and (min-width: 769px) {
+        width: 75px;
+        float: left;
+    }
 }
 
 #footer-nav {
     margin-bottom: 10px;
      
     @media only screen and (min-width: 769px) {
-        width: 10%;
-        max-width: 75px;
-        float: left;
-    }
-
-    @media only screen and (min-width: 769px) {
+        width: 33.3%;
+        order: 2;
         margin-top: 10px;
         margin-bottom: 0;
     }
@@ -174,13 +197,35 @@ p {
     }
 }
 
-#copyright {
+#footer-nav-inner-wrap {
+
+    @media only screen and (min-width: 769px) {
+        width: 60px;
+        margin: 0 auto;
+    }
+}
+
+#copyright-wrapper {
     margin: 10px 0;
 
     @media only screen and (min-width: 769px) {
-        width: 17%;
-        max-width: 128px;
-        float: right;
-        margin-left: 30%;
+        width: 33.3%;
+        order: 3;
     }
+}
+
+#copyright {
+
+    @media only screen and (min-width: 769px) {
+        width: 128px;
+        float: right;
+    }
+}
+
+#email {
+    margin: 10px 0;
+}
+
+#github {
+    margin: 10px 0;
 }
