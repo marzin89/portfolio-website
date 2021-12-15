@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div id="header-wrapper">
+            <!-- Logo -->
+            <div id="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logotyp">
+                </a>
+            </div>
+            <div id="header-right">
+                <!-- Main desktop navigation -->
+                <nav id="main-nav-desktop">
+                    <ul>
+                        <li><a class="navlink" href="about.html">Om mig</a></li>
+                        <li><a class="navlink" href="portfolio.html">Portfolio</a></li>
+                        <li id="current-page"><a class="navlink" href="cv.html">CV</a></li>
+                        <li><a class="navlink" href="contact.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <!-- Search bar and search icon -->
+                <div id="search">
+                    <input id="search-bar" type="search" value="Sök">
+                    <svg id="search-icon" role="button">
+                        <circle cx="10" cy="9" r="7" stroke="black" stroke-width="4" fill="white" />
+                        <line x1="14" x2="20" y1="14" y2="22" style="stroke:rgb(0,0,0);stroke-width:4" />
+                    </svg>
+                </div>
+                <!-- Hamburger icon -->
+                <div id="nav-icon" role="button">
+                    <div id="icon-bar1" class="icon-bar"></div>
+                    <div id="icon-bar2" class="icon-bar"></div>
+                    <div id="icon-bar3" class="icon-bar"></div>
+                </div>
+            </div>
+            <!-- Hamburger menu for smartphone and tablet -->
+            <nav id="main-nav-mobile">
+                <ul>
+                    <li><a class="navlink" href="about.html">Om mig</a></li>
+                    <li><a class="navlink" href="portfolio.html">Portfolio</a></li>
+                    <li><a class="navlink" href="cv.html">CV</a></li>
+                    <li><a class="navlink" href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Main content -->
+    <main>
+        <section id="cv">
+            <h1 id="h1-cv" class="cv-headings">CV</h1>
+            <!-- Education -->
+            <div id="education">
+                <h2 class="cv-headings">Utbildning</h2>
+            </div>
+            <!-- Experience -->
+            <div id="experience">
+                <h2 class="cv-headings">Arbetslivserfarenhet</h2>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div id="footer-wrapper">
+            <!-- Email and GitHub links -->
+            <div id="contact">
+                <div id="contact-inner-wrap">
+                    <p id="email"><a class="navlink" href="mailto:mazi2001@student.miun.se">E-post</a></p>
+                    <p id="github"><a class="navlink" href="https://github.com/marzin89">GitHub</a></p>
+                </div>
+            </div>
+            <!-- Footer navigation -->
+            <div id="footer-nav">
+                <div id="footer-nav-inner-wrap">
+                    <p><a class="navlink" href="about.html">Om mig</a></p>
+                    <p><a class="navlink" href="portfolio.html">Portfolio</a></p>
+                    <p><a class="navlink" href="cv.html"></a>CV</p>
+                    <p><a class="navlink" href="contact.html">Kontakt</a></p>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div id="copyright-wrapper">
+                <p id="copyright">Copyright 2021</p>
+            </div>
+            <!-- "Back-to-the-top-button" -->
+            <svg id="back-to-the-top" role="button">
+                <line x1="5" x2="20" y1="17" y2="5" style="stroke:rgb(0,0,0);stroke-width:4" />
+                <line x1="20" x2="35" y1="5" y2="17" style="stroke:rgb(0,0,0);stroke-width:4" />
+            </svg>       
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

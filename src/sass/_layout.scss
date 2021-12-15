@@ -147,6 +147,10 @@ h1 {
     margin: 10px 0;
 }
 
+#h1-cv {
+    font-size: $h1-font-size;
+}
+
 #h1-login, #h1-home {
     margin-bottom: 5px;
 }
@@ -161,8 +165,10 @@ h2 {
     }
 }
 
-@media only screen and (min-width: 769px) {
-    .cv-headings {
+.cv-headings {
+    font-size: $h3-font-size;
+
+    @media only screen and (min-width: 769px) {
         text-align: center;
     }
 }
