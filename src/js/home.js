@@ -6,7 +6,7 @@ let id = 0;
 // GET-anrop
 // Hämtar webbplatser
 // Kontrollen förhindrar att fetch-anropet körs på portfoliosidan
-if (window.location.href.indexOf('portfolio.html') == -1) {
+if (window.location.href.indexOf('index.html') !== -1) {
     const featured = document.getElementById('featured');
     fetch('https://studenter.miun.se/~mazi2001/writeable/dt173g/projekt/webbtjanst/api/api.php?cat=site')
         // Konverterar svaret från JSON
