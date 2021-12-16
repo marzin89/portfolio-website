@@ -4,9 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt</title>
+    <title>Logga in</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+<?php
+
+    // Inkluderar klasserna
+    include_once 'classes/Database.php';
+    include_once 'classes/User.php';
+
+    // Ny session
+    session_start();
+
+    // Variabler
+    $username = '';
+    $password = '';
+    $user_empty = '';
+    $pass_empty = '';
+    $validation_error = '';
+
+    // Ny instanser
+    $database = new Database();
+    $user = new User();
+
+    // Lagrar inloggningsuppgifterna eller genererar felmeddelanden om någon uppgift saknas
+    if (!empty($_POST['username'])) {
+        $_SESSION['username'] = $_POST['username'];
+        $username = $_SESSION['username'];
+    } else {
+        $user_empty = 'Användarnamn måste anges.';
+    }
+
+    if (!empty($_POST['password'])) {
+        $_SESSION['password'] = $_POST['password'];
+        $password = $_SESSION['password'];   
+    } else {
+        $pass_empty = 'Lösenord måste anges.';
+    }
+
+    if (isset($_GET['login-error'])) {
+        $validation_error = 'Fel användarnamn eller lösenord.';
+    }
+
+    // Skickar användaren till admin-sidan om användarnamn och lösenord är korrekta
+    if ($username && $password) {
+        if ( $user->login($username, $password)) {
+            header('Location: https://studenter.miun.se/~mazi2001/writeable/dt173g/projekt/webbplats/admin.php?cat=education');
+        }
+    }
+?>
 <body>
     <!-- Header -->
     <header>
@@ -59,16 +105,38 @@
         <section id="login-form">
             <h1 id="h1-login">Logga in</h1>
             <p><a id="sign-up-link" href="signup.php">Registrera dig</a></p>
-            <form action="admin.php" method="post">
+            <form action="login.php?submit=1" method="post">
                 <div>
-                    <input class="text-input" type="text" value="Användarnamn *">
-                    <p id="user-error" class="error"></p>
+                    <input id="username" class="text-input" type="text" placeholder="Användarnamn *" name="username">
+                    <p id="user-error" class="error">
+                        <?php
+                            // Skriver ut eventuellt felmeddelande
+                            if ($user_empty) {
+                                echo $user_empty;
+                            }
+                        ?>
+                    </p>
                 </div>
                 <div>
-                    <input class="text-input" type="text" value="Lösenord *">
-                    <p id="password-error" class="error"></p>
+                    <input id="password" class="text-input" type="password" placeholder="Lösenord *" name="password">
+                    <p id="password-error" class="error">
+                        <?php
+                            // Skriver ut eventuellt felmeddelande
+                            if ($pass_empty) {
+                                echo $pass_empty;
+                            }
+                        ?>
+                    </p>
                 </div>
-                <input class="submit-btn" type="submit" value="Skicka">
+                <input id="submit" class="submit-btn" type="submit" value="Skicka">
+                <p id="validation-error" class="error">
+                    <?php
+                        // Skriver ut eventuellt felmeddelande
+                        if ($validation_error) {
+                            echo $validation_error;
+                        }
+                    ?>
+                </p>
             </form>
         </section>
     </main>
@@ -102,6 +170,6 @@
             </svg>       
         </div>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
