@@ -42,14 +42,12 @@
         $pass_empty = 'Lösenord måste anges.';
     }
 
-    if (isset($_GET['login-error'])) {
-        $validation_error = 'Fel användarnamn eller lösenord.';
-    }
-
     // Skickar användaren till admin-sidan om användarnamn och lösenord är korrekta
     if ($username && $password) {
-        if ( $user->login($username, $password)) {
+        if ($user->login($username, $password)) {
             header('Location: https://studenter.miun.se/~mazi2001/writeable/dt173g/projekt/webbplats/admin.php?cat=education');
+        } else {
+            $validation_error = 'Fel användarnamn eller lösenord.';
         }
     }
 ?>
@@ -129,7 +127,7 @@
                     </p>
                 </div>
                 <input id="submit" class="submit-btn" type="submit" value="Skicka">
-                <p id="validation-error" class="error">
+                <p id="validation-error">
                     <?php
                         // Skriver ut eventuellt felmeddelande
                         if ($validation_error) {
