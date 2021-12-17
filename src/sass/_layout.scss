@@ -93,6 +93,14 @@ main {
     display: none;
 }
 
+.error, #validation-error {
+    color: red;
+}
+
+#confirm {
+    color: green;
+}
+
 textarea {
     height: 250px;
 
