@@ -126,7 +126,7 @@
                         ?>
                     </p>
                 </div>
-                <input id="submit" class="submit-btn" type="submit" value="Skicka">
+                <input id="submit" class="submit-btn" type="submit" value="Logga in">
                 <p id="validation-error">
                     <?php
                         // Skriver ut eventuellt felmeddelande
