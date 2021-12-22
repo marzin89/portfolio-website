@@ -173,6 +173,10 @@ h1 {
     margin-bottom: 5px;
 }
 
+.h1-about {
+    margin: 0;
+}
+
 h2 {
     font-size: $h1-font-size;
 }
@@ -199,9 +203,39 @@ p {
     @include section;
     max-width: 460px;
     margin: 0 auto;
+    padding-top: 20px;
+
+    #desktop-layout {
+        display: none;
+    }
 
     p {
         padding: 10px 0;
+    }
+
+    @media only screen and (min-width: 769px) {
+        max-width: 960px;
+
+        #mobile-tablet-layout {
+            display: none;
+        }
+
+        #desktop-layout {
+            display: block;
+            overflow: auto;
+
+            #about-left {
+                width: 48%;
+                max-width: 460px;
+                float: left;
+            }
+
+            #about-right {
+                width: 485;
+                max-width: 460px;
+                float: right;
+            }
+        }
     }
 }
 
