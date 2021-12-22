@@ -68,7 +68,7 @@ main {
     padding-bottom: 75px;
 }
 
-#contact-form, #login-form, #site {
+#contact-form, #login-form {
     @include section;
     padding-top: 20px;
 
@@ -80,6 +80,16 @@ main {
     @media only screen and (min-width: 769px) {
         max-width: 600px;
         margin: 0 auto;
+    }
+}
+
+#site {
+    @include section;
+    padding-top: 20px;
+    margin: 0 auto;
+
+    @media only screen and (min-width: 769px) {
+        max-width: 960px;
     }
 }
 
