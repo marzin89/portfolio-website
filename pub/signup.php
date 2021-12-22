@@ -31,7 +31,8 @@
     $database = new Database();
     $user = new User();
 
-    // Lagrar användaruppgifterna eller genererar felmeddelanden om någon uppgift saknas
+    /* Lagrar användaruppgifterna och genererar felmeddelanden om någon uppgift saknas,
+        har fel format eller om användarnamn och/eller lösenord är upptagna */
     if (!empty($_POST['first-name'])) {
         $first_name = $_POST['first-name'];
     } else {
@@ -48,6 +49,7 @@
         $email = $_POST['email'];
         if (!strpos($email, '@')) {
             $email_format_error = 'Ogiltig e-postadress.';
+            $email = '';
         }
     } else {
         $email_error = 'E-post måste anges.';
@@ -55,6 +57,10 @@
 
     if (!empty($_POST['username'])) {
         $username = $_POST['username'];
+        if (!$user->checkUsername($username)) {
+            $username_error = 'Användarnamnet är upptaget.';
+            $username = '';
+        }
     } else {
         $username_error = 'Användarnamn måste anges.';
     }
@@ -63,9 +69,24 @@
         $password = $_POST['password'];
         if (strlen($password) < 10) {
             $password_length_error = 'Lösenordet är för kort (minst 10 tecken).';
+            $password = '';
+        }
+        if (!$user->checkPassword($password)) {
+            $password_error = 'Lösenordet är upptaget.';
+            $password = '';
         }
     } else {
         $password_error = 'Lösenord måste anges.';
+    }
+
+    // Skapar användarkontot när alla uppgifter finns och är korrekta
+    if ($username && $password && $email && $first_name && $last_name) {
+        $user->setUsername($username);
+        $user->setPassword($password);
+        $user->setFirstName($first_name);
+        $user->setLastName($last_name);
+        $user->setEmail($email);
+        $user->createUserAccount();
     }
 ?>
 <body>
@@ -190,7 +211,14 @@
                 </div>
                 <input class="reset-btn" type="reset" value="Rensa">
                 <input id="submit" class="submit-btn" type="submit" value="Skicka">
-                <p id="confirm">Du har registrerats</p>
+                <p id="confirm">
+                    <?php
+                        // Skriver ut eventuellt bekräftelsemeddelande
+                        if ($user->confirm) {
+                            echo $user->confirm;
+                        }
+                    ?>
+                </p>
             </form>
         </section>
     </main>

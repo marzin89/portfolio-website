@@ -11,6 +11,7 @@ const lastNameError = document.getElementById('last-name-error');
 const emailError = document.getElementById('email-error');
 const usernameError = document.getElementById('username-error');
 const passwordError = document.getElementById('password-error');
+const confirm = document.getElementById('confirm');
 let submit = url.searchParams.get('submit');
 
 /* If the form has been submitted, error messages will be displayed 
@@ -34,5 +35,9 @@ if (submit) {
 
     if (!password.value) {
         passwordError.style.display = 'block';
+    }
+
+    if (confirm.innerHTML) {
+        confirm.style.display = 'block';
     }
 }
