@@ -5,7 +5,6 @@ const username = document.getElementById('username');
 const password = document.getElementById('password');
 const userError = document.getElementById('user-error');
 const passwordError = document.getElementById('password-error');
-let url = new URL(window.location.href);
 let submit = url.searchParams.get('submit');
 
 /* If the form has been submitted, error messages will be displayed 
