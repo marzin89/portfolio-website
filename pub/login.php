@@ -153,7 +153,7 @@
                 <div id="footer-nav-inner-wrap">
                     <p><a class="navlink" href="about.html">Om mig</a></p>
                     <p><a class="navlink" href="portfolio.html">Portfolio</a></p>
-                    <p><a class="navlink" href="cv.html"></a>CV</p>
+                    <p><a class="navlink" href="cv.html">CV</a></p>
                     <p><a class="navlink" href="contact.html">Kontakt</a></p>
                 </div>
             </div>

@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Sidhuvud -->
     <header>
         <div id="header-wrapper">
+            <!-- Logga -->
             <div id="logo">
                 <a href="index.html">
                     <img src="images/logo.png" alt="Logotyp">
                 </a>
             </div>
+            <!-- Huvudmeny desktop -->
             <div id="header-right">
                 <nav id="main-nav-desktop">
                     <ul>
@@ -24,6 +27,7 @@
                         <li><a class="navlink" href="contact.html">Kontakt</a></li>
                     </ul>
                 </nav>
+                <!-- Sökruta -->
                 <div id="search">
                     <input id="search-bar" type="search" value="Sök">
                     <svg id="search-icon" role="button">
@@ -31,12 +35,14 @@
                         <line x1="14" x2="20" y1="14" y2="22" style="stroke:rgb(0,0,0);stroke-width:4" />
                     </svg>
                 </div>
+                <!-- Hamburgerikon -->
                 <div id="nav-icon" role="button">
                     <div id="icon-bar1" class="icon-bar"></div>
                     <div id="icon-bar2" class="icon-bar"></div>
                     <div id="icon-bar3" class="icon-bar"></div>
                 </div>
             </div>
+            <!-- Huvudmeny mobil -->
             <nav id="main-nav-mobile">
                 <ul>
                     <li><a class="navlink" href="about.html">Om mig</a></li>
@@ -47,49 +53,25 @@
             </nav>
         </div>
     </header>
+    <!-- Innehåll -->
     <main>
-        <section id="welcome">
-            <h1>Earl grey ipsum</h1>
-            <p>Earl Grey ipsum dolor sit amet Assam English Breakfast Tea 
-                Gyokuro Gyokuro Ceylon PG Tips Yerba Mate Nilgiri Dong Ding 
-                Yorkshire Chun Mee Tie Kuan Yin Yorkshire Lipton Ginger Chai 
-                Biluochun Lipton Keemun Dong Ding.</p>
-            <a class="find-out-more" href="about.html">Läs mer</a>
-        </section>
-        <section id="featured">
-            <h2>Earl grey ipsum</h2>
-            <div id="featured-1" class="featured">
-                <h3>Earl grey ipsum</h3>
-                <div class="featured-description">
-                    <p>Earl Grey ipsum dolor sit amet Assam English 
-                        Breakfast Tea Gyokuro Gyokuro Ceylon PG Tips 
-                        Yerba Mate Nilgiri Dong Ding Yorkshire Chun 
-                        Mee . . .</p>
-                    <a class="find-out-more" href=""></a>
-                </div>
-            </div>
-            <div id="featured-2" class="featured">
-                <h3>Earl grey ipsum</h3>
-                <div class="featured-description">
-                    <p>Earl Grey ipsum dolor sit amet Assam English 
-                        Breakfast Tea Gyokuro Gyokuro Ceylon PG Tips 
-                        Yerba Mate Nilgiri Dong Ding Yorkshire Chun 
-                        Mee . . .</p>
-                    <a class="find-out-more" href=""></a>
-                </div>
-            </div>
-            <div id="featured-3" class="featured">
-                <h3>Earl grey ipsum</h3>
-                <div class="featured-description">
-                    <p>Earl Grey ipsum dolor sit amet Assam English 
-                        Breakfast Tea Gyokuro Gyokuro Ceylon PG Tips 
-                        Yerba Mate Nilgiri Dong Ding Yorkshire Chun 
-                        Mee . . .</p>
-                    <a class="find-out-more" href=""></a>
-                </div>
-            </div>
-            <a href="portfolio.html">Portfolio</a>
-        </section>
+        <div id="top-half">
+            <section id="welcome">
+                <h1 id="h1-home">Earl grey ipsum</h1>
+                <p>Earl Grey ipsum dolor sit amet Assam English Breakfast Tea 
+                    Gyokuro Gyokuro Ceylon PG Tips Yerba Mate Nilgiri Dong Ding 
+                    Yorkshire Chun Mee Tie Kuan Yin Yorkshire Lipton Ginger Chai 
+                    Biluochun Lipton Keemun Dong Ding.</p>
+                <p id="find-out-more-link"><a class="find-out-more" href="about.html">Läs mer</a></p>
+            </section>
+        </div>
+        <div id="bottom-half">
+            <!-- Utvalda webbplatser -->
+            <section id="featured">
+                <h2 id="h2-home">Webbplatser</h2>
+            </section>
+            <p id="portfolio-link"><a href="portfolio.html">Portfolio</a></p>
+        </div>
     </main>
     <!-- Footer -->
     <footer>
