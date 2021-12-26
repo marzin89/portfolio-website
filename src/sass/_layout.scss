@@ -427,3 +427,12 @@ img {
         text-align: center;
     }
 }
+
+.about-list {
+    line-height: 1.5em;
+    list-style-type: none;
+    
+    li {
+        font-style: italic;
+    }
+}
