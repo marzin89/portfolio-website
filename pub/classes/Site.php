@@ -67,20 +67,12 @@
         public function updateSite(): bool {
 
             $this->updated = date('Y-m-d H:i:s');
-            $query = '';
             
-            if ($this->img_path) {
-                $query = $this->conn->prepare('UPDATE site_portfolio_2 SET site_name = ?,
-                    site_image_path = ?, site_description = ?, site_url = ?, site_updated = ?
-                    WHERE site_id = ?');
-                $query->bind_param('ssssssi', $this->name, $this->img_path, $this->description,
-                    $this->url, $this->updated, $this->id);
-            } else {
-                $query = $this->conn->prepare('UPDATE site_portfolio_2 SET site_name = ?,
-                    site_description = ?, site_url = ?, site_updated = ? WHERE site_id = ?');
-                $query->bind_param('sssssi', $this->name, $this->description, $this->url, 
-                    $this->updated, $this->id);
-            }
+            $query = $this->conn->prepare('UPDATE site_portfolio_2 SET site_name = ?,
+                site_image_path = ?, site_description = ?, site_url = ?, site_updated = ?
+                WHERE site_id = ?');
+            $query->bind_param('sssssi', $this->name, $this->img_path, $this->description,
+                $this->url, $this->updated, $this->id);
             
             $query->execute();
 
