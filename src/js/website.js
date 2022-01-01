@@ -13,18 +13,16 @@ if (siteID) {
     // Konverterar svaret från JSON
     .then(response => response.json())
     // Loopar igenom och skriver ut
-    .then(data => {
-        // Kontrollerar om site_name finns (annars felmeddelande)
-        if (data.site_name) {      
+    .then(data => {    
             title.innerHTML = data.site_name;
             site.innerHTML +=   
                 `<h1>${data.site_name}</h1>
                 <img src="${data.site_image_path}">
                 <p>${data.site_description}</p>
                 <a href="${data.site_url}">Länk till webbplatsen</a>`;
-        // Skriver ut felmeddelandet vid misslyckad databasanslutning
-        } else {
-            site.innerHTML += `<p class="error">${data}</p>`; 
-        }
+    })
+    // Skriver ut felmeddelandet vid misslyckad databasanslutning
+    .catch(error => {
+        site.innerHTML += `<p class="error">${error}</p>`; 
     })
 }
