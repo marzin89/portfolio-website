@@ -14,8 +14,6 @@ if (window.location.href.indexOf('index.html') !== -1) {
         .then(data => {
             // Kontrollerar om svaret är en array (annars felmeddelande)
             if (Array.isArray(data)) {
-                // Kontrollerar om arrayen är längre än 1 (annars felmeddelande)
-                if (data.length > 1) {
                     // Loopar igenom och skriver ut
                     data.forEach(element => {
                         // Begränsar till tre webbplatser
@@ -30,11 +28,7 @@ if (window.location.href.indexOf('index.html') !== -1) {
                         }
                         id++;   
                     })
-                // Skriver ut felmeddelandet
-                } else {
-                    featured.innerHTML += `<p class="error">${data}</p>`;
-                }   
-            // Skriver ut felmeddelandet
+            // Skriver ut felmeddelandet vid misslyckad databasanslutning
             } else {
                 featured.innerHTML += `<p class="error">${data}</p>`;
             }
