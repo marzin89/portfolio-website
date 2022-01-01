@@ -59,6 +59,7 @@ if (window.location.href.indexOf('cv.html') !== -1) {
                         }
                     }
                 )
+            // Skriver ut felmeddelandet vid misslyckad databasanslutning
             } else {
                 education.innerHTML += `<p class="error">${data}</p>`;
             }
