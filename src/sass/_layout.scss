@@ -279,7 +279,8 @@ p {
     margin-top: 10px;
 }
 
-#admin-site-inputs {
+#admin-
+inputs {
     display: none;
 }
 
@@ -435,4 +436,20 @@ img {
     li {
         font-style: italic;
     }
+}
+
+#screenshot {
+    font-family: inherit;
+    font-size: inherit;
+    margin-bottom: 10px;
+}
+
+.site-left {
+    width: 50%;
+    float: left;
+}
+
+.site-right {
+    width: 50%;
+    float: right;
 }
