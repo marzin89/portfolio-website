@@ -22,7 +22,7 @@ if (siteID) {
                 <a href="${data.site_url}">Länk till webbplatsen</a>`;
     })
     // Skriver ut felmeddelandet vid misslyckad databasanslutning
-    .catch(error => {
-        site.innerHTML += `<p class="error">${error}</p>`; 
+    .catch(err => {
+        site.innerHTML += `<p class="error">${err}</p>`; 
     })
 }

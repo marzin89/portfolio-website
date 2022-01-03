@@ -57,8 +57,8 @@ if (window.location.href.indexOf('cv.html') !== -1) {
             })
         )
         // Skriver ut felmeddelandet vid misslyckad databasanslutning
-        .catch(error => {
-            education.innerHTML += `<p class="error">${error}</p>`;
+        .catch(err => {
+            education.innerHTML += `<p class="error">${err}</p>`;
         }
     )
 }

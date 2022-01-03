@@ -22,7 +22,7 @@ if (window.location.href.indexOf('portfolio.html') !== -1) {
     
     )
     // Skriver ut felmeddelandet vid misslyckad databasanslutning
-    .catch(error => {
-        portfolio.innerHTML += `<p class="error">${error}</p>`;
+    .catch(err => {
+        portfolio.innerHTML += `<p class="error">${err}</p>`;
     })
 }

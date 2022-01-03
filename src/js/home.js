@@ -27,7 +27,7 @@ if (window.location.href.indexOf('index.html') !== -1) {
         }) 
     )
     // Skriver ut felmeddelandet vid misslyckad databasanslutning
-    .catch(error => {
-        featured.innerHTML += `<p class="error">${error}</p>`
+    .catch(err => {
+        featured.innerHTML += `<p class="error">${err}</p>`
     });
 }
