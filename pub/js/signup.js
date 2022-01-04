@@ -3,7 +3,7 @@
 // Variabler
 const firstName = document.getElementById('first-name');
 const lastName = document.getElementById('last-name');
-const email = document.getElementById('email');
+const email = document.getElementById('email-input');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 const firstNameError = document.getElementById('first-name-error');
