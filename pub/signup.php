@@ -169,7 +169,7 @@
                     </p>
                 </div>
                 <div>
-                    <input id="email" class="text-input" type="text" placeholder="E-post *" name="email">
+                    <input id="email-input" class="text-input" type="text" placeholder="E-post *" name="email">
                     <p id="email-error" class="error">
                         <?php
                             // Skriver ut eventuellt felmeddelande
