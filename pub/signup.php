@@ -140,10 +140,6 @@
         <!-- Signup form -->
         <section id="login-form">
             <h1 id="h1-login">Registrera dig</h1>
-            <p>Earl Grey ipsum dolor sit amet Assam English Breakfast Tea 
-                Gyokuro Gyokuro Ceylon PG Tips Yerba Mate Nilgiri Dong Ding 
-                Yorkshire Chun Mee Tie Kuan Yin Yorkshire Lipton Ginger Chai 
-                Biluochun Lipton Keemun Dong Ding.</p>
             <p id="login-link"><a href="login.php">Logga in</a></p>
             <form action="signup.php?submit=1" method="post">
                 <div>
@@ -195,7 +191,8 @@
                     </p>
                 </div>
                 <div>
-                    <input id="password" class="text-input" type="password" placeholder="Lösenord *" name="password">
+                    <input id="password" class="text-input" type="password" placeholder="Lösenord (minst 10 tecken) *" 
+                        name="password">
                     <p id="password-error" class="error">
                         <?php
                             // Skriver ut eventuellt felmeddelande

@@ -86,7 +86,7 @@
     <main>
         <section id="admin">
             <p id="logout"><a href="admin.php?logout=1">Logga ut</a></p>
-            <h1>Välkommen till admin</h1>
+            <h1 id="h1-admin">Välkommen till admin</h1>
             <p>Här kan du lägga till, redigera eller radera utbildningar, jobb och webbplatser.
                 Välj kategori i dropdown-listan nedan så anpassas formuläret. 
                 Aktuella poster i den valda visas under formuläret.</p>
@@ -138,7 +138,7 @@
         </section>
         <!-- Output -->
         <section id="admin-output">
-            <h1 id="h1-admin-output">Utbildning</h1>
+            <h2 id="h1-admin-output">Utbildning</h2>
         </section>
     </main>
     <!-- Footer -->
