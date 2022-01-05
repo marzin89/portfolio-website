@@ -93,18 +93,13 @@ main {
     }
 }
 
-#login-form {
-    p {
-        margin-bottom: 10px;
-    }
-}
-
 .error, #confirm, #error {
     display: none;
 }
 
 .error, #validation-error {
     color: red;
+    margin-bottom: 10px;
 }
 
 #confirm {
@@ -285,10 +280,15 @@ inputs {
 }
 
 #logout {
-    width: 65px;
-    float: right;
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
     margin-top: 10px;
-    margin-right: 10px;
+    text-align: right;
+
+    @media only screen and (min-width: 769px) {
+        max-width: 600px;
+    }
 }
 
 img {
@@ -407,6 +407,11 @@ img {
     @media only screen and (min-width: 769px) {
         text-align: center;
     }
+}
+
+.site-name-admin {
+    font-size: $h3-font-size;
+    margin-bottom: 10px;
 }
 
 #portfolio-link {
