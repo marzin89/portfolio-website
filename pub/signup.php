@@ -144,7 +144,7 @@
                 Gyokuro Gyokuro Ceylon PG Tips Yerba Mate Nilgiri Dong Ding 
                 Yorkshire Chun Mee Tie Kuan Yin Yorkshire Lipton Ginger Chai 
                 Biluochun Lipton Keemun Dong Ding.</p>
-            <p><a id="sign-up-link" href="login.php">Logga in</a></p>
+            <p id="login-link"><a href="login.php">Logga in</a></p>
             <form action="signup.php?submit=1" method="post">
                 <div>
                     <input id="first-name" class="text-input" type="text" placeholder="Förnamn *" name="first-name">

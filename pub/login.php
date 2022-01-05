@@ -102,7 +102,7 @@
         <!-- Login form -->
         <section id="login-form">
             <h1 id="h1-login">Logga in</h1>
-            <p><a id="sign-up-link" href="signup.php">Registrera dig</a></p>
+            <p id="signup-link"><a href="signup.php">Registrera dig</a></p>
             <form action="login.php?submit=1" method="post">
                 <div>
                     <input id="username" class="text-input" type="text" placeholder="Användarnamn *" name="username">
