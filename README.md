@@ -67,6 +67,7 @@ Adding websites requires the following information:
 - Name
 - Description
 - URL
+
 Please note that it is not possible to upload images. When adding a website, a standard
 image will be displayed. When editing a website, the image will remain the same.
 ##### Editing content
