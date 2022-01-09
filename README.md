@@ -7,6 +7,7 @@ The public website consists of the following pages:
 - CV (education and jobs)
 - Om mig (about me)
 - Subpage for websites
+
 The hidden website consists of the following pages:
 - Logga in (sign in)
 - Registrera dig (sign up)
