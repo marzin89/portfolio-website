@@ -29,6 +29,7 @@ The following information is required:
 - Email address
 - Username
 - Password (at least 10 characters)
+
 Error messages will be displayed for empty fields, invalid email address,
 taken username/password or if the password is too short.
 #### Admin
@@ -39,6 +40,7 @@ The following categories are available:
 - Utbildning (educations, default)
 - Jobb (jobs)
 - Webbplats (websites)
+
 All existing items within the selected category are displayed below the form along with 
 edit and delete links. Please note that you cannot delete the first three items. 
 This is a security measure. Selecting a category toggles the form and the output section.
@@ -80,6 +82,7 @@ The website uses the following programs/techniques:
 - JavaScript
 - PHP
 - MySQL/SQL
+
 The public website was created with Gulp automation.
 Please refer to the gulpfile for details.
 The website uses a [PHP REST API](https://github.com/marzin89/portfolio-rest-api).
